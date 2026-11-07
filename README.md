@@ -31,7 +31,7 @@ Variantes: `.logo` (fundo claro) e `.logo-light` (rodapé escuro).
 | # | Seção | Âncora | Conteúdo |
 |---|---|---|---|
 | 1 | Menu superior | `.site-header` | Logo, navegação (Início, Serviços, Nossos trabalhos, Diferenciais, Contato) e botão **Solicitar orçamento** |
-| 2 | Banner principal (hero) | `#inicio` | Foto de sala recém-pintada, título "SUA CASA MERECE UMA NOVA PINTURA!", subtítulo, 2 CTAs e selo de confiança |
+| 2 | Banner principal (hero) | `#inicio` | Foto de sala recém-pintada, título "PINTOR EM CAMPINAS E VALINHOS", subtítulo, 2 CTAs e selo de confiança |
 | 3 | Nossos serviços | `#servicos` | 6 cards com foto + botão de orçamento cada |
 | 4 | Diferenciais | `#diferenciais` | Fundo escuro/azul royal, 6 ícones SVG, título "MAIS DO QUE PINTAR..." |
 | 5 | Galeria de trabalhos | `#trabalhos` | Grade assimétrica com 6 fotos + aviso de imagens ilustrativas |
@@ -134,9 +134,13 @@ images/
 
 ## 6. SEO e acessibilidade
 
-- `<title>`, `meta description`, `meta keywords`, `canonical`, `robots`, `theme-color`.
-- Open Graph e Twitter Card com imagem e descrição.
-- JSON-LD `HomeAndConstructionBusiness` com telefone, área de atuação e catálogo de serviços.
+- Título, descrição e textos principais voltados a pintor em Campinas e Valinhos.
+- `robots` com indexação permitida e prévias grandes de imagem; `robots.txt` público.
+- Open Graph e Twitter Card com descrições locais e imagem existente.
+- JSON-LD `HousePainter` com telefone, Campinas e Valinhos como áreas atendidas e catálogo de serviços, sem endereço, preços ou avaliações inventados.
+- Seção de atendimento por cidade e dúvidas sobre orçamento, economia e disponibilidade imediata, sem promessa de menor preço ou atendimento no mesmo dia.
+- `meta keywords` removida: o Google não a utiliza para classificação. Os termos relevantes estão no conteúdo visível.
+- Canonical relativo `/` removido: domínio oficial ainda não consta no repositório. Canonical absoluto, sitemap e URLs sociais absolutas devem ser configurados após confirmá-lo; veja **SEO.md**.
 - Hierarquia semântica: um único `<h1>`, `<section>` com IDs, `<nav>`, `<article>`, `<footer>`.
 - `alt` descritivo em todas as imagens; textos apenas para leitores de tela em ícones.
 - Foco visível (`:focus-visible`), skip-link, `aria-expanded`/`aria-controls` no menu.
@@ -176,7 +180,7 @@ Para trocar por fotos reais:
 - Publicar via **Hosted Deploy** (requer autorização explícita) e apontar o domínio próprio.
 - Trocar as imagens ilustrativas por fotografias reais dos trabalhos.
 - Incluir depoimentos reais (somente com autorização dos clientes).
-- Adicionar endereço/região de atendimento quando definido, ampliando o SEO local.
+- Confirmar o domínio oficial para concluir canonical e sitemap e seguir o checklist de Search Console e Perfil da Empresa em **SEO.md**. Campinas e Valinhos já estão indicadas como regiões de atendimento; não publicar endereço residencial se não houver atendimento ao público.
 - Instalar Google Analytics / Meta Pixel para medir conversões dos anúncios.
 - Configurar evento de conversão no clique do WhatsApp (`dataLayer`).
 

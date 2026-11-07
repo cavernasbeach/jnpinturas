@@ -139,6 +139,43 @@ button { font: inherit; cursor: pointer; }
   margin-bottom: 0;
 }
 
+/* ---------- Atendimento local e dúvidas ---------- */
+.local-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.local-card {
+  padding: clamp(24px, 4vw, 36px);
+  background: var(--white);
+  border: 1px solid var(--gray-line);
+  border-radius: var(--radius-lg);
+}
+.local-card h3 { font-size: clamp(1.3rem, 3vw, 1.7rem); }
+.local-card p { color: var(--ink-70); }
+.local-card .btn { margin-top: 8px; }
+.faq-list { max-width: 900px; }
+.faq-list details { border-bottom: 1px solid var(--gray-line); }
+.faq-list summary {
+  padding: 22px 8px;
+  color: var(--ink);
+  font-weight: 800;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+.faq-list details[open] summary { color: var(--blue); }
+.faq-list details p {
+  padding: 0 8px 22px;
+  margin: 0;
+  color: var(--ink-70);
+  max-width: 78ch;
+}
+.faq-list a { text-decoration: underline; }
+@media (max-width: 720px) {
+  .local-services-grid { grid-template-columns: 1fr; }
+  .local-card .btn { width: 100%; }
+}
+
 /* ---------- Botões ---------- */
 .btn {
   --btn-bg: var(--blue);
