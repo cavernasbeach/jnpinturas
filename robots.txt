@@ -1,4 +1,5 @@
 # Rastreamento público permitido. Este arquivo deve responder em /robots.txt.
-# Adicionar a diretiva Sitemap com URL absoluta após confirmar o domínio oficial.
 User-agent: *
 Allow: /
+
+Sitemap: https://www.jnpinturas.com.br/sitemap.xml

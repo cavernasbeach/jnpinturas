@@ -140,7 +140,7 @@ images/
 - JSON-LD `HousePainter` com telefone, Campinas e Valinhos como áreas atendidas e catálogo de serviços, sem endereço, preços ou avaliações inventados.
 - Seção de atendimento por cidade e dúvidas sobre orçamento, economia e disponibilidade imediata, sem promessa de menor preço ou atendimento no mesmo dia.
 - `meta keywords` removida: o Google não a utiliza para classificação. Os termos relevantes estão no conteúdo visível.
-- Canonical relativo `/` removido: domínio oficial ainda não consta no repositório. Canonical absoluto, sitemap e URLs sociais absolutas devem ser configurados após confirmá-lo; veja **SEO.md**.
+- Domínio oficial: **https://www.jnpinturas.com.br/**. Canonical, URLs sociais e dados estruturados usam esse endereço; `sitemap.xml` foi criado e referenciado em `robots.txt`. Conexão DNS e publicação ainda precisam ser concluídas na plataforma; veja **SEO.md**.
 - Hierarquia semântica: um único `<h1>`, `<section>` com IDs, `<nav>`, `<article>`, `<footer>`.
 - `alt` descritivo em todas as imagens; textos apenas para leitores de tela em ícones.
 - Foco visível (`:focus-visible`), skip-link, `aria-expanded`/`aria-controls` no menu.
@@ -177,10 +177,10 @@ Para trocar por fotos reais:
 
 ## 9. Próximos passos sugeridos
 
-- Publicar via **Hosted Deploy** (requer autorização explícita) e apontar o domínio próprio.
+- Publicar a versão atual pelo botão **Publish / Publicar** no Lovable e adicionar **www.jnpinturas.com.br** nas configurações de domínios. No provedor DNS, copiar exatamente os registros exibidos pela plataforma; aguardar a verificação e o HTTPS. Veja o passo a passo em **SEO.md**.
 - Trocar as imagens ilustrativas por fotografias reais dos trabalhos.
 - Incluir depoimentos reais (somente com autorização dos clientes).
-- Confirmar o domínio oficial para concluir canonical e sitemap e seguir o checklist de Search Console e Perfil da Empresa em **SEO.md**. Campinas e Valinhos já estão indicadas como regiões de atendimento; não publicar endereço residencial se não houver atendimento ao público.
+- Seguir o checklist de Search Console e Perfil da Empresa em **SEO.md**, enviando **https://www.jnpinturas.com.br/sitemap.xml** após a publicação. Campinas e Valinhos já estão indicadas como regiões de atendimento; não publicar endereço residencial se não houver atendimento ao público.
 - Instalar Google Analytics / Meta Pixel para medir conversões dos anúncios.
 - Configurar evento de conversão no clique do WhatsApp (`dataLayer`).
 
@@ -188,9 +188,9 @@ Para trocar por fotos reais:
 
 ## 10. Status
 
-**Concluído:** identidade visual, 9 seções, integração WhatsApp em todos os CTAs,
-formulário funcional com validação e máscara, menu responsivo, SEO básico,
-galeria preparada para fotos reais, README.
+**Concluído no código:** identidade visual, 9 seções, integração WhatsApp em todos os CTAs,
+formulário com validação e máscara, menu responsivo, SEO com domínio oficial,
+canonical e sitemap, galeria preparada para fotos reais, README.
 
-**Pendente:** publicação (Hosted Deploy), imagens reais, depoimentos reais,
-domínio, rastreamento de conversões.
+**Pendente fora do repositório:** publicação no Lovable, conexão DNS e certificado HTTPS.
+Também pendentes: imagens reais, depoimentos reais e rastreamento de conversões.

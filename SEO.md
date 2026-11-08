@@ -6,7 +6,8 @@ A página original já possuía HTML estático, título, descrição, hierarquia
 textos alternativos nas imagens, carregamento prioritário do banner e dados estruturados.
 Entretanto, não destacava Campinas e Valinhos no título ou no conteúdo principal;
 o schema informava atendimento em todo o Brasil e o canonical era apenas `/`.
-O repositório não informa o domínio público oficial.
+O domínio oficial informado pelo proprietário é https://www.jnpinturas.com.br/.
+As URLs do código foram atualizadas; isso não conecta o domínio à hospedagem nem publica o site.
 
 Esta análise se limita aos arquivos: não foram medidos tráfego, posição no Google,
 Core Web Vitals, respostas HTTP da hospedagem ou a indexação atual.
@@ -31,23 +32,31 @@ As perguntas frequentes atendem ao visitante; sites de pintura não são elegív
 para os resultados enriquecidos de FAQ reservados pelo Google a sites de saúde
 ou governamentais reconhecidos.
 
-## Pendência técnica: confirmar o domínio oficial
+## Domínio oficial e publicação
 
-Depois de definir onde o site estará publicado:
+O endereço canônico é **https://www.jnpinturas.com.br/**. O HTML já inclui canonical,
+`og:url`, URLs absolutas das imagens sociais e do schema, além da identificação da empresa.
+O arquivo `sitemap.xml` contém a página inicial e está referenciado em `robots.txt`.
+Âncoras da mesma página não são páginas separadas no sitemap.
 
-1. Escolher uma única versão HTTPS do endereço (com ou sem www).
-2. Configurar redirecionamentos permanentes das versões alternativas na hospedagem.
-3. Adicionar canonical absoluto da página inicial no HTML, incluindo eventual subpasta.
-4. Adicionar `og:url` e converter as URLs das imagens sociais e do schema em absolutas.
-5. Criar `sitemap.xml` com a URL canônica da página inicial e referenciá-lo em `robots.txt`.
-   Âncoras da mesma página não devem ser cadastradas como páginas diferentes.
-6. Garantir que `/robots.txt` e `/sitemap.xml` retornem seus arquivos reais, não o HTML
-   da página inicial. Isso depende também da configuração da hospedagem.
-7. Conferir que o site público responde com HTTP 200 e não possui bloqueio de indexação
-   imposto por cabeçalhos HTTP, senha ou configuração da plataforma.
+A publicação e a conexão DNS dependem das contas do proprietário; não foram executadas
+por uma alteração no repositório. Para concluir pelo Lovable:
 
-Não foi usado o endereço do repositório GitHub como se fosse o endereço do site.
-Não foram adicionados códigos fictícios de verificação ou um sitemap com domínio inventado.
+1. Abrir o projeto no Lovable e usar **Publish / Publicar** para publicar a versão atual.
+2. Na configuração de domínios do projeto, adicionar **www.jnpinturas.com.br**.
+3. No provedor que administra o DNS, cadastrar exatamente os registros e valores
+   exibidos pelo Lovable, incluindo eventual verificação. Não adivinhar IPs ou CNAMEs.
+   Alterar apenas registros relacionados ao site; preservar os registros de e-mail.
+4. Aguardar a verificação do domínio e a emissão do certificado HTTPS pela plataforma.
+5. Conectar também **jnpinturas.com.br**, se disponível, e configurar na hospedagem
+   o redirecionamento permanente da versão sem www para **https://www.jnpinturas.com.br/**.
+6. Conferir que a página responde com HTTP 200 e que `/robots.txt` e `/sitemap.xml`
+   entregam os arquivos reais, não o HTML inicial. Caso a plataforma não os publique
+   nesses caminhos, ajustar a entrega de arquivos estáticos na hospedagem.
+7. Confirmar ausência de bloqueio por senha, cabeçalho HTTP ou configuração da plataforma.
+
+Não foram adicionados códigos fictícios de verificação nem registros DNS presumidos.
+A propagação do DNS e o certificado devem ser acompanhados no painel da plataforma.
 
 ## Ações na conta do proprietário
 
