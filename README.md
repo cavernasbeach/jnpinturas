@@ -181,8 +181,8 @@ Para trocar por fotos reais:
 - Trocar as imagens ilustrativas por fotografias reais dos trabalhos.
 - Incluir depoimentos reais (somente com autorização dos clientes).
 - Seguir o checklist de Search Console e Perfil da Empresa em **SEO.md**, enviando **https://www.jnpinturas.com.br/sitemap.xml** após a publicação. Campinas e Valinhos já estão indicadas como regiões de atendimento; não publicar endereço residencial se não houver atendimento ao público.
-- Instalar Google Analytics / Meta Pixel para medir conversões dos anúncios.
-- Configurar evento de conversão no clique do WhatsApp (`dataLayer`).
+- Ativar o contêiner real do Google Tag Manager e configurar GA4/Ads conforme **GOOGLE-ADS.md**. A medição está preparada, mas permanece desativada até inserir o ID real e publicar as tags com os filtros de consentimento.
+- Validar as conversões de WhatsApp e telefone antes de investir. Meta Pixel não foi instalado.
 
 ---
 
@@ -216,8 +216,35 @@ Não foram executados testes de navegador, HTTP ou hospedagem nesta etapa.
 
 **Concluído no código:** página inicial, cinco páginas de destino, integração WhatsApp,
 formulário com validação e máscara na home, menu responsivo, SEO com domínio oficial,
-canonical e sitemap, galeria preparada para fotos reais e documentação.
+canonical e sitemap, galeria preparada para fotos reais e documentação. Medição de
+cliques preparada com consentimento por finalidade e página de privacidade.
 
 **A confirmar fora do repositório:** publicação das páginas, conexão DNS e HTTPS.
-Também pendentes: imagens e depoimentos reais, rastreamento de conversões e configuração
-das contas Google. Criar as páginas não instala tags nem ativa campanhas de anúncios.
+Também pendentes: imagens e depoimentos reais, identificador real do GTM, publicação
+das tags, homologação e configuração das contas Google. O código não ativa campanhas.
+
+## 12. Medição, privacidade e campanhas
+
+- `js/main.js` carrega o módulo local `js/measurement.js` em todas as páginas.
+- `js/measurement.js` apresenta as preferências, lembra a escolha por até 180 dias e
+  só carrega o GTM após autorização para alguma finalidade e no domínio oficial.
+  `CONFIG.gtmId` está vazio propositalmente; o Google não está ativo nesta entrega.
+- `css/measurement.css` cuida do banner e dos controles de privacidade, com botões
+  para recusar, salvar escolhas separadas de Analytics/Ads ou aceitar os opcionais.
+- `/privacidade/` explica o formulário, fornecedores, medição, revogação e contato.
+  Os links “Privacidade” e “Preferências de cookies” são inseridos no rodapé por JS.
+- Eventos preparados: `whatsapp_click` e `phone_click`, sem campos do formulário
+  nem mensagem do WhatsApp. Formulário válido conta como uma ação de WhatsApp;
+  não equivale a conversa iniciada, pedido confirmado ou serviço contratado.
+- A prévia Lovable não carrega tags reais. Links de WhatsApp e telefone continuam
+  funcionando quando a pessoa recusa a medição ou usa bloqueadores.
+
+**Manual de ativação: [GOOGLE-ADS.md](GOOGLE-ADS.md)** — onde obter IDs reais, tags,
+acionadores e filtros de consentimento no GTM, vínculo GA4/Ads, conversões sem
+contagem duplicada, campanhas, palavras-chave, negativas, anúncios e recursos,
+Perfil da Empresa, rotina de 90 dias e checklist de testes antes de anunciar.
+O orçamento descrito é uma sugestão e precisa de aprovação do responsável.
+
+Não foram executados testes de navegador, Tag Assistant, rede ou contas Google
+nesta etapa. É necessário publicar e homologar o conjunto site + contêiner antes
+de investir em anúncios. A empresa deve revisar a política e o tratamento de dados.

@@ -290,6 +290,8 @@
         feedback.classList.add("is-visible");
       }
 
+      // Só informa a ação; nenhum campo ou mensagem segue para a medição.
+      document.dispatchEvent(new CustomEvent("jn:quote-whatsapp"));
       window.open(waUrl(mensagem), "_blank", "noopener");
     });
   }
@@ -312,6 +314,12 @@
     initReveal();
     initForm();
     initYear();
+    // Compartilhado pela home e pelas cinco páginas de destino.
+    // Este arquivo só carrega tags externas após autorização do visitante.
+    var measurement = document.createElement("script");
+    measurement.src = "/js/measurement.js";
+    measurement.async = true;
+    document.head.appendChild(measurement);
   }
 
   if (document.readyState === "loading") {
