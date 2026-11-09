@@ -87,6 +87,50 @@ A propagação do DNS e o certificado devem ser acompanhados no painel da plataf
 - Manter telefone, nome e site consistentes em perfis e diretórios legítimos.
 - Avaliar o site publicado no PageSpeed Insights em celular antes de decidir ajustes de desempenho.
 
+## Reforço de SEO nesta revisão
+
+- Descrição da busca mais concisa e alinhada ao conteúdo da página.
+- Dados estruturados em um grafo que conecta o site, a página, a empresa,
+  as cidades atendidas e o catálogo de seis serviços com o mesmo prestador.
+- Contato para orçamentos associado ao telefone e WhatsApp já exibidos na página.
+- Sem endereço, preços, horários, avaliações ou certificações inventados.
+  O schema descreve a empresa, mas não garante elegibilidade para resultados
+  enriquecidos de negócio local, que possuem requisitos próprios do Google.
+- Permissão explícita para prévias de imagens grandes e trechos de texto e vídeo,
+  sujeita à decisão do mecanismo de busca.
+- Preload da imagem principal, mantendo a prioridade alta existente para iniciar
+  sua transferência mais cedo. O impacto real deve ser medido no site publicado.
+- Texto alternativo da imagem no compartilhamento pelo Twitter/X.
+- Novas perguntas visíveis em “Dúvidas sobre pintura e orçamento” sobre prazo,
+  massa corrida e cuidados com umidade, sem prometer solução de infiltrações.
+- Canonical, sitemap e robots preservados no domínio oficial com www.
+
+### Checklist de ativação e acompanhamento no Google
+
+1. Publicar as alterações e concluir a conexão do domínio com HTTPS no Lovable.
+   Definir www como principal e configurar o redirecionamento permanente das
+   demais versões na hospedagem; o canonical sozinho não faz redirecionamentos.
+2. Abrir https://search.google.com/search-console/ e adicionar a propriedade de
+   domínio `jnpinturas.com.br`. Publicar no DNS o TXT exato fornecido pelo Google
+   e concluir a verificação; nenhum código fictício foi adicionado ao site.
+3. Em “Sitemaps”, enviar `https://www.jnpinturas.com.br/sitemap.xml` após conferir
+   que esse endereço entrega XML e que `/robots.txt` entrega texto no site público.
+4. Inspecionar `https://www.jnpinturas.com.br/`, executar o teste da URL publicada
+   e solicitar indexação. Não é necessário repetir a solicitação diariamente.
+5. Criar ou atualizar o Perfil da Empresa em https://www.google.com/business/.
+   Confirmar categoria, áreas de serviço, telefone, site e informações reais.
+   A presença no mapa depende desse perfil, não apenas do código do site.
+6. Validar a página pública no Schema Markup Validator e no teste de resultados
+   avançados do Google. Ter schema válido não garante recursos visuais na busca.
+7. Medir a versão móvel em https://pagespeed.web.dev/ e acompanhar no Search
+   Console cliques, impressões, consultas e páginas indexadas ao longo das semanas.
+   Consultas iniciais de interesse: “pintor em Campinas”, “pintor em Valinhos”,
+   “pintura de apartamento em Campinas” e “pintura residencial em Valinhos”.
+
+Esta revisão foi feita nos arquivos do repositório. Não foram executados testes
+HTTP, de desempenho ou de resultados avançados, nem acessadas as contas Google
+ou as configurações de publicação/DNS do proprietário.
+
 ## Expectativas
 
 Nenhuma configuração garante a primeira página ou um prazo de indexação. O Google

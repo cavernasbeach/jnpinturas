@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pintor em Campinas e Valinhos | JN Pinturas</title>
-<meta name="description" content="Precisa de pintor em Campinas ou Valinhos? JN Pinturas: pintura de casas e apartamentos, massa corrida e repintura. Peça orçamento pelo WhatsApp (19) 99575-0193.">
+<meta name="description" content="Pintura residencial em Campinas e Valinhos: casas, apartamentos, massa corrida e repintura. Solicite seu orçamento com a JN Pinturas pelo WhatsApp.">
 <meta name="author" content="JN Pinturas">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="#1646C8">
 <link rel="canonical" href="https://www.jnpinturas.com.br/">
 <meta property="og:url" content="https://www.jnpinturas.com.br/">
@@ -23,7 +23,9 @@
 <meta name="twitter:title" content="Pintor em Campinas e Valinhos | JN Pinturas">
 <meta name="twitter:description" content="Pintura residencial em Campinas e Valinhos: casas, apartamentos, massa corrida e repintura. Peça orçamento pelo WhatsApp.">
 <meta name="twitter:image" content="https://www.jnpinturas.com.br/images/hero-sala-pintada.jpg">
+<meta name="twitter:image:alt" content="Imagem ilustrativa de sala residencial com paredes recém-pintadas">
 
+<link rel="preload" as="image" href="images/hero-sala-pintada.jpg" fetchpriority="high">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,25 +35,77 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HousePainter",
-  "@id": "https://www.jnpinturas.com.br/#empresa",
-  "url": "https://www.jnpinturas.com.br/",
-  "name": "JN Pinturas",
-  "description": "Pintor em Campinas e Valinhos, SP. Pintura residencial de casas e apartamentos, paredes e tetos, portas e batentes, massa corrida e repintura.",
-  "telephone": "+5519995750193",
-  "image": "https://www.jnpinturas.com.br/images/hero-sala-pintada.jpg",
-  "areaServed": [
-    { "@type": "City", "name": "Campinas", "containedInPlace": { "@type": "State", "name": "São Paulo" } },
-    { "@type": "City", "name": "Valinhos", "containedInPlace": { "@type": "State", "name": "São Paulo" } }
-  ],
-  "knowsLanguage": "pt-BR",
-  "makesOffer": [
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pintura de apartamentos" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pintura de casas" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pintura de paredes e tetos" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Massa corrida e preparação de superfícies" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pintura de portas e batentes" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Repintura e revitalização" } }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.jnpinturas.com.br/#site",
+      "url": "https://www.jnpinturas.com.br/",
+      "name": "JN Pinturas",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://www.jnpinturas.com.br/#empresa" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.jnpinturas.com.br/#pagina",
+      "url": "https://www.jnpinturas.com.br/",
+      "name": "Pintor em Campinas e Valinhos | JN Pinturas",
+      "description": "Pintura residencial em Campinas e Valinhos: casas, apartamentos, massa corrida e repintura. Solicite seu orçamento com a JN Pinturas pelo WhatsApp.",
+      "inLanguage": "pt-BR",
+      "isPartOf": { "@id": "https://www.jnpinturas.com.br/#site" },
+      "mainEntity": { "@id": "https://www.jnpinturas.com.br/#empresa" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.jnpinturas.com.br/images/hero-sala-pintada.jpg",
+        "caption": "Imagem ilustrativa de sala residencial com paredes pintadas"
+      }
+    },
+    {
+      "@type": "HousePainter",
+      "@id": "https://www.jnpinturas.com.br/#empresa",
+      "url": "https://www.jnpinturas.com.br/",
+      "name": "JN Pinturas",
+      "description": "Pintor em Campinas e Valinhos, SP. Pintura residencial de casas e apartamentos, paredes e tetos, portas e batentes, massa corrida e repintura.",
+      "telephone": "+5519995750193",
+      "image": "https://www.jnpinturas.com.br/images/hero-sala-pintada.jpg",
+      "mainEntityOfPage": { "@id": "https://www.jnpinturas.com.br/#pagina" },
+      "areaServed": [
+        { "@id": "https://www.jnpinturas.com.br/#campinas" },
+        { "@id": "https://www.jnpinturas.com.br/#valinhos" }
+      ],
+      "knowsLanguage": "pt-BR",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+5519995750193",
+        "url": "https://wa.me/5519995750193",
+        "contactType": "Orçamentos e agendamentos",
+        "availableLanguage": "pt-BR"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços de pintura residencial em Campinas e Valinhos",
+        "url": "https://www.jnpinturas.com.br/#servicos",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pintura de apartamentos", "serviceType": "Pintura residencial", "provider": { "@id": "https://www.jnpinturas.com.br/#empresa" } } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pintura de casas", "serviceType": "Pintura residencial interna e externa", "provider": { "@id": "https://www.jnpinturas.com.br/#empresa" } } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pintura de paredes e tetos", "provider": { "@id": "https://www.jnpinturas.com.br/#empresa" } } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Massa corrida e preparação de superfícies", "provider": { "@id": "https://www.jnpinturas.com.br/#empresa" } } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pintura de portas e batentes", "provider": { "@id": "https://www.jnpinturas.com.br/#empresa" } } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Repintura e revitalização", "provider": { "@id": "https://www.jnpinturas.com.br/#empresa" } } }
+        ]
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "https://www.jnpinturas.com.br/#campinas",
+      "name": "Campinas",
+      "containedInPlace": { "@type": "State", "name": "São Paulo", "containedInPlace": { "@type": "Country", "name": "Brasil" } }
+    },
+    {
+      "@type": "City",
+      "@id": "https://www.jnpinturas.com.br/#valinhos",
+      "name": "Valinhos",
+      "containedInPlace": { "@type": "State", "name": "São Paulo", "containedInPlace": { "@type": "Country", "name": "Brasil" } }
+    }
   ]
 }
 </script>
@@ -511,6 +565,18 @@
         <details>
           <summary>O que influencia o preço da pintura de uma casa ou apartamento?</summary>
           <p>Os principais fatores são a área a pintar, a condição da superfície, a preparação necessária, o tipo de tinta, o número de demãos e as condições de acesso. Confirme no orçamento se tintas e outros materiais estão incluídos e qual é o prazo previsto.</p>
+        </details>
+        <details>
+          <summary>Quanto tempo leva a pintura de uma casa ou apartamento?</summary>
+          <p>O prazo depende da área, do estado das paredes, dos reparos e dos intervalos de secagem indicados para cada produto. Imóveis ocupados, regras do condomínio e chuva em áreas externas também podem afetar o cronograma. Informe esses detalhes ao <a href="#contato">solicitar seu orçamento</a> para combinar um prazo adequado ao serviço.</p>
+        </details>
+        <details>
+          <summary>Quando usar massa corrida antes da pintura?</summary>
+          <p>A massa corrida pode ajudar a nivelar pequenas imperfeições em paredes internas secas, quando a superfície e o produto são compatíveis. Áreas externas ou sujeitas à umidade exigem materiais apropriados, conforme orientação do fabricante. A preparação também pode envolver limpeza, remoção de partes soltas, lixamento e fundo adequado; nem toda repintura precisa de massa em toda a parede.</p>
+        </details>
+        <details>
+          <summary>É possível pintar uma parede com mofo, umidade ou descascamento?</summary>
+          <p>Antes de pintar, é importante identificar e corrigir a origem da umidade ou infiltração. Cobrir o problema com tinta não resolve sua causa e pode comprometer o acabamento. Envie fotos e descreva o que acontece na parede para avaliar a preparação; reparos de impermeabilização ou hidráulica podem precisar de um profissional específico antes da pintura.</p>
         </details>
       </div>
       <p class="section-note"><a href="#contato" class="link-blue">Solicite um orçamento de pintura para seu imóvel</a></p>
