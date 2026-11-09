@@ -186,11 +186,38 @@ Para trocar por fotos reais:
 
 ---
 
-## 10. Status
+## 10. Páginas de destino por cidade e serviço
 
-**Concluído no código:** identidade visual, 9 seções, integração WhatsApp em todos os CTAs,
-formulário com validação e máscara, menu responsivo, SEO com domínio oficial,
-canonical e sitemap, galeria preparada para fotos reais, README.
+Além da página inicial, o site possui cinco páginas HTML estáticas independentes:
 
-**Pendente fora do repositório:** publicação no Lovable, conexão DNS e certificado HTTPS.
-Também pendentes: imagens reais, depoimentos reais e rastreamento de conversões.
+- `/pintor-em-campinas/` → `pintor-em-campinas/index.html`
+- `/pintura-residencial-valinhos/` → `pintura-residencial-valinhos/index.html`
+- `/pintor-em-paulinia/` → `pintor-em-paulinia/index.html`
+- `/pintura-residencial-hortolandia/` → `pintura-residencial-hortolandia/index.html`
+- `/pintura-de-apartamentos/` → `pintura-de-apartamentos/index.html`
+
+As páginas reutilizam `css/style.css` e `js/main.js`, com componentes adicionais em
+`css/landing.css`. Possuem conteúdo específico, perguntas frequentes, metadados e
+canonical próprios, dados estruturados de serviço e breadcrumb, links entre páginas,
+telefone clicável e WhatsApp com mensagem contextualizada e botão fixo. Os textos e
+links estão no HTML, sem depender de JavaScript para indexação ou navegação.
+
+A seção “Onde atendemos” e o rodapé da página inicial levam às páginas novas.
+O sitemap lista as seis URLs. O atendimento regional indicado é Campinas, Valinhos,
+Paulínia e Hortolândia, com disponibilidade a confirmar conforme o projeto.
+As imagens continuam ilustrativas e não devem ser apresentadas como portfólio real.
+
+Antes de anunciar, a publicação precisa servir cada pasta com seu `index.html` e
+os arquivos compartilhados. Testar acesso direto e recarregamento de todas as URLs,
+conferindo que não retornam a página inicial por fallback. Ver checklist em **SEO.md**.
+Não foram executados testes de navegador, HTTP ou hospedagem nesta etapa.
+
+## 11. Status
+
+**Concluído no código:** página inicial, cinco páginas de destino, integração WhatsApp,
+formulário com validação e máscara na home, menu responsivo, SEO com domínio oficial,
+canonical e sitemap, galeria preparada para fotos reais e documentação.
+
+**A confirmar fora do repositório:** publicação das páginas, conexão DNS e HTTPS.
+Também pendentes: imagens e depoimentos reais, rastreamento de conversões e configuração
+das contas Google. Criar as páginas não instala tags nem ativa campanhas de anúncios.

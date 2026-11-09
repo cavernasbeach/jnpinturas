@@ -36,8 +36,8 @@ ou governamentais reconhecidos.
 
 O endereço canônico é **https://www.jnpinturas.com.br/**. O HTML já inclui canonical,
 `og:url`, URLs absolutas das imagens sociais e do schema, além da identificação da empresa.
-O arquivo `sitemap.xml` contém a página inicial e está referenciado em `robots.txt`.
-Âncoras da mesma página não são páginas separadas no sitemap.
+O arquivo `sitemap.xml` contém a página inicial e as cinco páginas de destino e está
+referenciado em `robots.txt`. Âncoras da mesma página não são páginas separadas no sitemap.
 
 A publicação e a conexão DNS dependem das contas do proprietário; não foram executadas
 por uma alteração no repositório. Para concluir pelo Lovable:
@@ -130,6 +130,59 @@ A propagação do DNS e o certificado devem ser acompanhados no painel da plataf
 Esta revisão foi feita nos arquivos do repositório. Não foram executados testes
 HTTP, de desempenho ou de resultados avançados, nem acessadas as contas Google
 ou as configurações de publicação/DNS do proprietário.
+
+## Páginas de destino para Pesquisa do Google Ads e SEO local
+
+A etapa de páginas de destino acrescenta cinco documentos HTML independentes, com
+conteúdo disponível sem JavaScript. O projeto é estático: cada URL corresponde a
+uma pasta com `index.html`, sem depender de rotas de React ou de um banco de dados.
+Os links internos e os canonicals usam a versão com barra final.
+
+| URL de destino | Intenção e conteúdo específico |
+|---|---|
+| `https://www.jnpinturas.com.br/pintor-em-campinas/` | Contratar pintor em Campinas; escopo, imóvel ocupado, acesso e orçamento |
+| `https://www.jnpinturas.com.br/pintura-residencial-valinhos/` | Pintura residencial em Valinhos; troca de cores, superfícies internas e externas |
+| `https://www.jnpinturas.com.br/pintor-em-paulinia/` | Contratar pintor em Paulínia; preparação da base, altura e condições de acesso |
+| `https://www.jnpinturas.com.br/pintura-residencial-hortolandia/` | Renovação em Hortolândia; mudança, imóvel ocupado e entrega de chaves |
+| `https://www.jnpinturas.com.br/pintura-de-apartamentos/` | Serviço de apartamentos; regras do condomínio, proteção, vistoria e cronograma |
+
+Cada página possui título, descrição e canonical próprios, Open Graph, um H1,
+perguntas frequentes específicas, links para as outras páginas e dados estruturados
+`WebPage`, `Service` e `BreadcrumbList`. Não foram criadas avaliações, preços,
+endereços físicos ou certificações. As imagens existentes continuam identificadas
+como ilustrativas, não como prova de trabalhos realizados.
+
+A página inicial agora apresenta as quatro cidades em “Onde atendemos”, com links
+para as páginas detalhadas e para pintura de apartamentos. O banner, os metadados,
+o contato, o rodapé e as áreas do prestador no schema acompanham a abrangência
+regional solicitada. O sitemap contém seis URLs ao todo.
+
+Os botões abrem o WhatsApp existente com mensagens contextualizadas por cidade ou
+serviço; existe um botão fixo nas páginas novas e telefone clicável na seção final.
+Esse comportamento não configura uma conversão no Google Ads. Cliques não comprovam
+que uma conversa foi enviada, um orçamento foi solicitado ou um contrato foi fechado.
+
+### Validação obrigatória na hospedagem antes de anunciar
+
+1. Publicar a alteração e abrir cada uma das cinco URLs diretamente, além de navegar
+   pelos links de “Onde atendemos” na página inicial. Recarregar cada página para
+   confirmar que ela entrega o documento correto, com HTTP 200, e não a página inicial.
+2. Confirmar o carregamento de `/css/style.css`, `/css/landing.css`, `/js/main.js` e
+   das imagens em cada URL, inclusive em celular. A hospedagem precisa publicar as
+   pastas estáticas; se aplicar fallback de página única, ajustar a publicação para
+   servir cada `index.html`. Não usar uma URL que ainda não entregue a página correta
+   como destino de anúncio.
+3. Verificar a entrega de XML no sitemap e reenviá-lo ao Search Console. Inspecionar
+   as cinco URLs e solicitar indexação. O Google decide se e quando indexar.
+4. Testar os links de WhatsApp e telefone, conferir o número e a mensagem por origem.
+   Confirmar as cidades e a disponibilidade real de atendimento antes da veiculação.
+5. Validar dados estruturados e desempenho nas ferramentas do Google após publicar.
+
+Esta etapa não acessa contas Google, não cria nem ativa campanhas, não instala tags
+de medição e não configura o Perfil da Empresa. A próxima etapa do plano trata da
+preparação de conversões e das campanhas; a ativação depende dos identificadores
+reais e das configurações nas contas do proprietário. Não foram realizados testes
+HTTP, de navegador, de desempenho ou de publicação a partir deste acesso.
 
 ## Expectativas
 
