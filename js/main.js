@@ -3,7 +3,7 @@
    - menu mobile (drawer)
    - link ativo por seção (scrollspy)
    - revelação de elementos no scroll
-   - montagem da mensagem do WhatsApp por origem do clique
+   - mensagem padrão em todos os links de WhatsApp
    - formulário de orçamento -> WhatsApp
    ============================================================ */
 (function () {
@@ -11,23 +11,21 @@
 
   var WHATSAPP_NUMBER = "5519995750193";
   var WHATSAPP_BASE = "https://wa.me/" + WHATSAPP_NUMBER;
+  var WHATSAPP_MESSAGE = "Olá! Gostaria de solicitar um orçamento para pintura residencial.";
 
   function waUrl(text) {
     return WHATSAPP_BASE + "?text=" + encodeURIComponent(text);
   }
 
   /* ---------------------------------------------------------
-     1. Links de WhatsApp com mensagem por origem
+     1. Mensagem única em todos os links de WhatsApp
      --------------------------------------------------------- */
   function initWhatsAppLinks() {
-    var links = document.querySelectorAll(".wa-link");
+    var links = document.querySelectorAll('.wa-link, a[href^="https://wa.me/"]');
 
     Array.prototype.forEach.call(links, function (link) {
-      var text = link.getAttribute("data-text");
-      if (!text) {
-        text = "Olá! Gostaria de solicitar um orçamento para pintura residencial.";
-      }
-      link.setAttribute("href", waUrl(text));
+      link.setAttribute("data-text", WHATSAPP_MESSAGE);
+      link.setAttribute("href", waUrl(WHATSAPP_MESSAGE));
       link.setAttribute("target", "_blank");
       link.setAttribute("rel", "noopener noreferrer");
     });
@@ -279,7 +277,7 @@
       }
 
       var mensagem =
-        "Olá! Gostaria de solicitar um orçamento para pintura residencial.\n\n" +
+        WHATSAPP_MESSAGE + "\n\n" +
         "Nome: " + nome + "\n" +
         "Telefone: " + telefone + "\n" +
         "Tipo de imóvel: " + imovel + "\n" +
