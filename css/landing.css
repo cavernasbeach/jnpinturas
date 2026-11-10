@@ -35,10 +35,7 @@
 @media (max-width: 540px) {
   .header-inner { gap: 10px; }
   .header-inner > .btn { max-width: 128px; padding: 10px 12px; font-size: .68rem; letter-spacing: .02em; }
-  .logo { gap: 8px; }
-  .logo-mark { width: 36px; height: 36px; }
-  .logo-word { font-size: .86rem; }
-  .logo-sub { font-size: .48rem; letter-spacing: .08em; }
+  .site-header .logo-image { width: 160px; }
   .landing-quick-contact { left: 16px; right: 16px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); }
   .landing-hero .hero-actions .btn { width: 100%; }
 }

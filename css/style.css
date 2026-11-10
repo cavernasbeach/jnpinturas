@@ -281,61 +281,25 @@ button { font: inherit; cursor: pointer; }
   min-height: var(--header-h);
 }
 
-/* Logotipo tipográfico */
+/* Logotipo oficial com slogan, preservando as proporções da imagem. */
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
-  color: var(--ink);
-  flex: 0 0 auto;
+  flex: 0 1 auto;
+  min-width: 0;
 }
-.logo:hover { color: var(--ink); }
-
-.logo-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: linear-gradient(150deg, var(--blue) 0%, var(--blue-dark) 100%);
-  color: #fff;
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 1.02rem;
-  letter-spacing: -.04em;
-  line-height: 1;
-  box-shadow: 0 6px 16px rgba(22, 70, 200, .3);
+.logo-image {
+  display: block;
+  width: clamp(160px, 22vw, 240px);
+  max-width: 100%;
+  height: auto;
 }
-
-.logo-type { display: flex; flex-direction: column; line-height: 1; }
-
-.logo-word {
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 1.06rem;
-  letter-spacing: .2em;
-  color: var(--ink);
-  text-transform: uppercase;
-}
-
-.logo-sub {
-  margin-top: 5px;
-  font-family: var(--font-body);
-  font-size: .56rem;
-  font-weight: 700;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--blue);
-}
-
-.logo-light .logo-word { color: #fff; }
-.logo-light .logo-sub { color: rgba(255, 255, 255, .6); }
-.logo-light .logo-mark {
+.logo-light {
+  padding: 6px 10px;
   background: #fff;
-  color: var(--blue-dark);
-  box-shadow: none;
+  border-radius: 10px;
 }
+.logo-light .logo-image { width: 250px; }
 
 /* Navegação */
 .nav { display: flex; align-items: center; gap: 30px; }
@@ -1317,9 +1281,7 @@ button { font: inherit; cursor: pointer; }
 }
 
 @media (max-width: 400px) {
-  .logo-word { font-size: .95rem; letter-spacing: .14em; }
-  .logo-mark { width: 40px; height: 40px; font-size: .94rem; }
-  .logo-sub { font-size: .5rem; letter-spacing: .13em; }
+  .site-header .logo-image { width: 160px; }
   .hero-title { font-size: 1.8rem; }
 }
 
